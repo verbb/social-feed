@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.5 - 2024-04-05
+
+### Added
+- Add improved session-handling for authorization and callback methods, to improve failed sessions in some cases.
+- Improve error feedback for feeds preview.
+
+### Fixed
+- Fix an error when uninstalling the plugin.
+- Fix Facebook photos not returning all photos.
+
 ## 1.0.4 - 2024-02-11
 
 ### Fixed
