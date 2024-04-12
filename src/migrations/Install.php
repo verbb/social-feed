@@ -2,6 +2,7 @@
 namespace verbb\socialfeeds\migrations;
 
 use craft\db\Migration;
+use craft\helpers\MigrationHelper;
 
 use verbb\auth\Auth;
 
@@ -24,6 +25,7 @@ class Install extends Migration
 
     public function safeDown(): bool
     {
+        $this->dropForeignKeys();
         $this->dropTables();
 
         // Delete all tokens for this plugin
@@ -100,6 +102,21 @@ class Install extends Migration
     {
         $this->dropTableIfExists('{{%socialfeeds_sources}}');
         $this->dropTableIfExists('{{%socialfeeds_feeds}}');
-        $this->dropTableIfExists('{{%socialfeeds_cache}}');
+        $this->dropTableIfExists('{{%socialfeeds_posts}}');
+    }
+
+    public function dropForeignKeys(): void
+    {
+        if ($this->db->tableExists('{{%socialfeeds_sources}}')) {
+            MigrationHelper::dropAllForeignKeysOnTable('{{%socialfeeds_sources}}', $this);
+        }
+
+        if ($this->db->tableExists('{{%socialfeeds_feeds}}')) {
+            MigrationHelper::dropAllForeignKeysOnTable('{{%socialfeeds_feeds}}', $this);
+        }
+
+        if ($this->db->tableExists('{{%socialfeeds_posts}}')) {
+            MigrationHelper::dropAllForeignKeysOnTable('{{%socialfeeds_posts}}', $this);
+        }
     }
 }
