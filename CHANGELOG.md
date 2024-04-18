@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.6 - 2024-04-18
+
+### Added
+- Add `business_management` scope to Instagram.
+
+### Changed
+- Update `graphApiVersion` for Instagram.
+
 ## 1.0.5 - 2024-04-05
 
 ### Added
