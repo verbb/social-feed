@@ -18,46 +18,28 @@ In order to fetch from Instagram, you must ensure the following:
 1. Go to the <a href="https://developers.facebook.com/apps/" target="_blank">Meta for Developers</a> page.
 1. Click the **Create App** button.
 1. Select **Other** and click the **Next** button.
-1. Select **Consumer** and click the **Next** button.
+1. Select **Business** and click the **Next** button.
 1. Fill in the **App Name** and **App Contact Email**. The **Business Portfolio** is optional.
 
-### Step 2: Setup Instagram Basic Display
+### Step 2: Setup Instagram Graph API
 1. Once created, in the left-hand sidebar, click the **Add Product** button.
-1. Under **Instagram Basic Display** click the **Set Up** button.
-1. Click the **Create New App** button.
-1. Enter the name of your new Facebook app, and click the **Click Create App** button.
-1. For the **Valid OAuth Redirect URIs** setting, enter the value from the **Redirect URI** field in Social Feeds.
-1. For the **Deauthorize Callback URL** and **Data Deletion Request Callback URL** settings, enter your website URL.
-1. Under the **User Token Generator** section, click the **Add or Remove Instagram Testers** button.
-1. Click the **Add People** button.
-1. Select **Instagram Tester** option and enter your Instagram source’s username(s).
-1. Navigate to **App Roles** → **Roles** in the left-hand sidebar.
-1. Under the **User Token Generator** section, click the **Add Instagram Testers** button.
-1. Provide your Instagram source’s username(s).
-1. Click the **Submit** button to send the invitation.
-    - Go to <a href="https://instagram.com/" target="_blank">Instagram</a> and login to the source you just invited.
-    - Navigate to **(Profile Icon)** → **Edit Profile** → **Apps and Websites**.
-    - Under the **Tester Invites** tab, accept the invitation.
-1. Navigate to **App Settings** → **Basic**.
-1. Copy the **App ID** from Facebook and paste in the **Client ID** field in Social Feeds.
-1. Copy the **App Secret** from Facebook and paste in the **Client Secret** field in Social Feeds.
+1. Under **Instagram Graph API** click the **Set Up** button.
 
-### Step 3: Setup Facebook Login
+### Step 3: Setup Facebook Login for Business
 1. In the left-hand sidebar, click the **Add Product** button.
-1. Under **Facebook Login** click the **Set Up** button.
-1. Select **Web** as the type and your website address into **Site URL**, and click the **Save** button.
-1. Navigate to the **Facebook Login** section in the left-hand sidebar, click **Settings**.
+1. Under **Facebook Login for Business** click the **Set Up** button.
+1. Navigate to the **Facebook Login for Business** section in the left-hand sidebar, click **Settings**.
 1. For the **Valid OAuth Redirect URIs** setting, enter the value from the **Redirect URI** field in Social Feeds.
 1. Click the **Save Changes** button.
 1. Navigate to **App Settings** → **Basic** item in the left-hand sidebar.
 1. Enter your domain name to the **App Domains** field.
-1. Enter your **Privacy Policy URL**, **Terms of Service URL** and **Site URL**.
+1. Enter your **Privacy Policy URL** and **Terms of Service URL**.
 1. Click the **Save Changes** button.
 
-### Step 3: Connect to Instagram
+### Step 4: Connect to Instagram
 1. In the Social Feeds feed settings, click the **Connect** button and login to Instagram/Facebook.
 
-### Step 4: Select your Instagram Business Account
+### Step 5: Select your Instagram Business Account
 1. Select the **Instagram Business Account** that is linked to your Facebook page, to pull content from.
 1. Click the **Save** button for the account.
 
