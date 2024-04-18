@@ -50,6 +50,7 @@ class Instagram extends OAuthSource
     public function getDefaultScopes(): array
     {
         return [
+            'business_management',
             'pages_show_list',
             'instagram_basic',
             'instagram_manage_comments',
