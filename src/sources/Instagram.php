@@ -42,7 +42,7 @@ class Instagram extends OAuthSource
     public function getOAuthProviderConfig(): array
     {
         $config = parent::getOAuthProviderConfig();
-        $config['graphApiVersion'] = 'v15.0';
+        $config['graphApiVersion'] = 'v19.0';
 
         return $config;
     }
