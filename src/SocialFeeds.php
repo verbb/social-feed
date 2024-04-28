@@ -135,6 +135,10 @@ class SocialFeeds extends Plugin
             $event->rules['social-feeds/sources/new'] = 'social-feeds/sources/edit';
             $event->rules['social-feeds/sources/<handle:{handle}>'] = 'social-feeds/sources/edit';
             $event->rules['social-feeds/settings'] = 'social-feeds/plugin/settings';
+
+            if (Craft::$app->getConfig()->getGeneral()->headlessMode || !Craft::$app->getConfig()->getGeneral()->cpTrigger) {
+                $event->rules['social-feeds/auth/callback'] = 'social-feeds/auth/callback';
+            }
         });
     }
 
