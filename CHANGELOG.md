@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.7 - 2024-04-29
+
+### Added
+- Add support for `headlessMode` redirect URIs.
+
+### Changed
+- Update English translations.
+
 ## 1.0.6 - 2024-04-18
 
 ### Added
