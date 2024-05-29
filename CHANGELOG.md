@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.1 - 2024-05-29
+
+### Added
+- Add support for `headlessMode` redirect URIs.
+- Add `business_management` scope to Instagram.
+
+### Changed
+- Update English translations.
+- Update `graphApiVersion` for Instagram.
+
 ## 2.0.0 - 2024-05-13
 
 ### Added
