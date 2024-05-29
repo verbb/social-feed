@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.8 - 2024-05-29
+
+### Changed
+- Update English translations.
+
 ## 1.0.7 - 2024-04-29
 
 ### Added
