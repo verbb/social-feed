@@ -16,6 +16,27 @@
 - Update `symfony/property-access` dependency.
 - Fix an error when uninstalling.
 
+## 1.0.8 - 2024-05-29
+
+### Changed
+- Update English translations.
+
+## 1.0.7 - 2024-04-29
+
+### Added
+- Add support for `headlessMode` redirect URIs.
+
+### Changed
+- Update English translations.
+
+## 1.0.6 - 2024-04-18
+
+### Added
+- Add `business_management` scope to Instagram.
+
+### Changed
+- Update `graphApiVersion` for Instagram.
+
 ## 1.0.5 - 2024-04-05
 
 ### Added
