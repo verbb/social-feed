@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2 - 2024-09-07
+
+### Added
+- Add Craft Teams support for permissions.
+
 ## 2.0.1 - 2024-05-29
 
 ### Added
