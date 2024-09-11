@@ -6,41 +6,12 @@
 
 <hr>
 
-{% set endpoint = source.endpoint ?? 'page' %}
-
-{{ forms.selectField({
-    label: 'Page or Group' | t('social-feeds', { name: source.providerName }),
-    instructions: 'Select whether to source content from a {name} Page or {name} Group.' | t('social-feeds', { name: source.providerName }),
-    name: 'endpoint',
-    options: [
-        { label: 'Group' | t('social-feeds'), value: 'group' },
-        { label: 'Page' | t('social-feeds'), value: 'page' },
-    ],
+{{ customForms.providerSettingsField(source, {
+    label: '{name} Page' | t('social-feeds', { name: source.providerName }),
+    instructions: 'The {name} Page to pull content from.' | t('social-feeds', { name: source.providerName }),
+    name: 'pageId',
     required: true,
-    value: endpoint,
-    warning: macros.configWarning("sources.#{source.handle}.endpoint", 'social-feeds'),
-    errors: source.getErrors('endpoint'),
-    toggle: true,
-    targetPrefix: '.endpoint-',
 }) }}
-
-<div class="endpoint-group {% if endpoint != 'group' %}hidden{% endif %}">
-    {{ customForms.providerSettingsField(source, {
-        label: '{name} Group' | t('social-feeds', { name: source.providerName }),
-        instructions: 'The {name} Group to pull content from.' | t('social-feeds', { name: source.providerName }),
-        name: 'groupId',
-        required: true,
-    }) }}
-</div>
-
-<div class="endpoint-page {% if endpoint != 'page' %}hidden{% endif %}">
-    {{ customForms.providerSettingsField(source, {
-        label: '{name} Page' | t('social-feeds', { name: source.providerName }),
-        instructions: 'The {name} Page to pull content from.' | t('social-feeds', { name: source.providerName }),
-        name: 'pageId',
-        required: true,
-    }) }}
-</div>
 
 {% set inputs %}
 {% set inputKey = random() %}

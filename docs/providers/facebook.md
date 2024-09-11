@@ -7,8 +7,8 @@ Your Facebook App **does not** require review and approval by Facebook to use So
 
 ## Connecting to Facebook
 
-### Step 1. Admin Access to Facebook Page or Facebook Group
-In order to fetch posts from a Facebook Page or Facebook Group, you must be an Admin for the page/group you want to access.
+### Step 1. Admin Access to Facebook Page
+In order to fetch posts from a Facebook Page, you must be an Admin for the page you want to access.
 
 ### Step 2: Register a Facebook App
 1. Go to the <a href="https://developers.facebook.com/apps/" target="_blank">Meta for Developers</a> page.
@@ -34,10 +34,10 @@ In order to fetch posts from a Facebook Page or Facebook Group, you must be an A
 
 ### Step 4: Connect to Facebook
 1. In the Social Feeds source settings, click the **Connect** button and login to Facebook.
-1. Ensure you pick either the Facebook Group or Facebook Page you have admin access to.
+1. Ensure you pick the Facebook Page you have admin access to.
 
-### Step 5: Select your Facebook Page or Facebook Group
-1. Select either a **Facebook Page** or a **Facebook Group** that you'd like connected to.
+### Step 5: Select your Facebook Page
+1. Select a **Facebook Page** that you'd like connected to.
 1. Click the **Save** button for the source.
 
 ### Business Pages
@@ -68,8 +68,3 @@ Facebook provides the following types of content as posts.
 - Photos (Photos from your Facebook Photos page)
 - Videos (Videos from your Facebook Videos page)
 - Events (Events from your Facebook Events page)
-- Group Feed (Posts from your Facebook group)
-- Photos (Photos from your Facebook Photos group)
-- Videos (Videos from your Facebook Videos group)
-- Events (Events from your Facebook Events group)
-

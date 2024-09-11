@@ -33,33 +33,26 @@ class Facebook extends OAuthSource
     public bool $enablePhotos = false;
     public bool $enableVideos = false;
     public bool $enableEvents = false;
-    public ?string $endpoint = null;
-    public ?string $groupId = null;
     public ?string $pageId = null;
 
 
     // Public Methods
     // =========================================================================
 
+    public function __construct(array $config = [])
+    {
+        unset($config['endpoint'], $config['groupId']);
+
+        parent::__construct($config);
+    }
+
     public function defineRules(): array
     {
         $rules = parent::defineRules();
 
         $rules[] = [
-            ['endpoint'], 'required', 'when' => function($model) {
-                return $model->enabled;
-            },
-        ];
-
-        $rules[] = [
-            ['groupId'], 'required', 'when' => function($model) {
-                return $model->enabled && $model->endpoint === 'group' && $model->isConnected();
-            },
-        ];
-
-        $rules[] = [
             ['pageId'], 'required', 'when' => function($model) {
-                return $model->enabled && $model->endpoint === 'page' && $model->isConnected();
+                return $model->enabled && $model->isConnected();
             },
         ];
 
@@ -87,37 +80,19 @@ class Facebook extends OAuthSource
     public function fetchSourceSettings(string $settingsKey): ?array
     {
         try {
-            if ($settingsKey === 'pageId') {
-                $pages = [];
+            $pages = [];
 
-                $response = $this->request('GET', 'me/accounts');
-                $sources = $response['data'] ?? [];
+            $response = $this->request('GET', 'me/accounts');
+            $sources = $response['data'] ?? [];
 
-                foreach ($sources as $source) {
-                    $pages[] = [
-                        'label' => $source['name'] ?? null,
-                        'value' => $source['id'] ?? null,
-                    ];
-                }
-
-                return $pages;
+            foreach ($sources as $source) {
+                $pages[] = [
+                    'label' => $source['name'] ?? null,
+                    'value' => $source['id'] ?? null,
+                ];
             }
 
-            if ($settingsKey === 'groupId') {
-                $pages = [];
-
-                $response = $this->request('GET', 'me/groups');
-                $sources = $response['data'] ?? [];
-
-                foreach ($sources as $source) {
-                    $pages[] = [
-                        'label' => $source['name'] ?? null,
-                        'value' => $source['id'] ?? null,
-                    ];
-                }
-
-                return $pages;
-            }
+            return $pages;
         } catch (Throwable $e) {
             self::apiError($this, $e);
         }
@@ -132,35 +107,29 @@ class Facebook extends OAuthSource
         $posts = [];
 
         try {
-            if ($this->endpoint == 'page') {
-                // This will fail if not a page (Business or Group) so catch and continue
-                try {
-                    $response = $this->request('GET', $this->pageId, [
-                        'query' => ['fields' => 'access_token'],
-                    ]);
+            // This will fail if not a page (Business or Group) so catch and continue
+            try {
+                $response = $this->request('GET', $this->pageId, [
+                    'query' => ['fields' => 'access_token'],
+                ]);
 
-                    $pageAccessToken = $response['access_token'] ?? null;
+                $pageAccessToken = $response['access_token'] ?? null;
 
-                    // Update the token in Auth to use this from now on.
-                    if ($pageAccessToken && $token = $this->getToken()) {
-                        $token->accessToken = $pageAccessToken;
+                // Update the token in Auth to use this from now on.
+                if ($pageAccessToken && $token = $this->getToken()) {
+                    $token->accessToken = $pageAccessToken;
 
-                        Auth::$plugin->getTokens()->saveToken($token);
-                    }
-                } catch (Throwable $e) {
-                    self::apiError($this, $e, false);
+                    Auth::$plugin->getTokens()->saveToken($token);
                 }
+            } catch (Throwable $e) {
+                self::apiError($this, $e, false);
             }
 
             $postType = null;
             $endpoint = [];
             $fields = [];
 
-            if ($this->endpoint === 'page') {
-                $endpoint[] = $this->pageId;
-            } else if ($this->endpoint === 'group') {
-                $endpoint[] = $this->groupId;
-            }
+            $endpoint[] = $this->pageId;
 
             if ($this->enableProfile) {
                 $postType = 'post';
