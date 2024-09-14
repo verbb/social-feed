@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.3 - 2024-09-14
+
+### Removed
+- Remove the ability to create feeds to a Facebook Group (no longer possible via Facebook’s API).
+
 ## 2.0.2 - 2024-09-07
 
 ### Added
