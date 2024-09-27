@@ -61,6 +61,9 @@ class Facebook extends OAuthSource
             'pages_read_engagement',
             'pages_manage_metadata',
             'pages_read_user_content',
+
+            // To be able to read `me/accounts`
+            'business_management',
         ];
     }
 
