@@ -40,27 +40,6 @@ In order to fetch posts from a Facebook Page, you must be an Admin for the page 
 1. Select a **Facebook Page** that you'd like connected to.
 1. Click the **Save** button for the source.
 
-### Business Pages
-If you are connecting to a Facebook Page connected to a business, you'll need to supply additional scopes in your [configuration](docs:get-started/configuration).
-
-```php
-<?php
-
-return [
-    '*' => [
-        // ...
-        'sources' => [
-            'facebook' => [
-                // ...
-                'scopes' => [
-                    'business_management',
-                ],
-            ],
-        ],
-    ]
-];
-```
-
 ## Available Content
 Facebook provides the following types of content as posts.
 
