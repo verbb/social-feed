@@ -13,16 +13,15 @@ In order to fetch posts from a Facebook Page, you must be an Admin for the page 
 ### Step 2: Register a Facebook App
 1. Go to the <a href="https://developers.facebook.com/apps/" target="_blank">Meta for Developers</a> page.
 1. Click the **Create App** button.
+1. Select **I don’t want to connect a business portfolio yet.** and click the **Next** button.
 1. Select **Other** and click the **Next** button.
 1. Select **Business** and click the **Next** button.
 1. Fill in the **App Name** and **App Contact Email**. The **Business Portfolio** is optional.
 
-### Step 3: Setup Facebook Login
+### Step 3: Setup Facebook Login for Business
 1. Once created, in the left-hand sidebar, click the **Add Product** button.
 1. Under **Facebook Login for Business** click the **Set Up** button.
-1. A warning banner will appear **Are you looking for other options?** to switch to Facebook Login. Click the **Switch to Facebook Login** link.
-1. Select **Certain platforms aren’t available with this product** (or any other applicable option) in the modal window and click the **Switch to Facebook Login** button.
-1. Navigate to the **Facebook Login** section in the left-hand sidebar, click **Settings**.
+1. Navigate to the **Facebook Login for Business** section in the left-hand sidebar, click **Settings**.
 1. For the **Valid OAuth Redirect URIs** setting, enter the value from the **Redirect URI** field in Social Feeds.
 1. Click the **Save Changes** button.
 1. Navigate to **App Settings** → **Basic** item in the left-hand sidebar.

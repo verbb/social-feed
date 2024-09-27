@@ -17,6 +17,7 @@ In order to fetch from Instagram, you must ensure the following:
 ### Step 1: Register a Facebook App
 1. Go to the <a href="https://developers.facebook.com/apps/" target="_blank">Meta for Developers</a> page.
 1. Click the **Create App** button.
+1. Select **I don’t want to connect a business portfolio yet.** and click the **Next** button.
 1. Select **Other** and click the **Next** button.
 1. Select **Business** and click the **Next** button.
 1. Fill in the **App Name** and **App Contact Email**. The **Business Portfolio** is optional.
@@ -35,6 +36,9 @@ In order to fetch from Instagram, you must ensure the following:
 1. Enter your domain name to the **App Domains** field.
 1. Enter your **Privacy Policy URL** and **Terms of Service URL**.
 1. Click the **Save Changes** button.
+1. Copy the **App ID** from Facebook and paste in the **Client ID** field in Social Feeds.
+1. Copy the **App Secret** from Facebook and paste in the **Client Secret** field in Social Feeds.
+1. Save the Social Feeds source, ready to connect.
 
 ### Step 4: Connect to Instagram
 1. In the Social Feeds feed settings, click the **Connect** button and login to Instagram/Facebook.
