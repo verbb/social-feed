@@ -24,7 +24,7 @@ In order to fetch from Instagram, you must ensure the following:
 
 ### Step 2: Setup Instagram Graph API
 1. Once created, in the left-hand sidebar, click the **Add Product** button.
-1. Under **Instagram Graph API** click the **Set Up** button.
+1. Under **Instagram** click the **Set Up** button.
 
 ### Step 3: Setup Facebook Login for Business
 1. In the left-hand sidebar, click the **Add Product** button.
@@ -41,7 +41,10 @@ In order to fetch from Instagram, you must ensure the following:
 1. Save the Social Feeds source, ready to connect.
 
 ### Step 4: Connect to Instagram
-1. In the Social Feeds feed settings, click the **Connect** button and login to Instagram/Facebook.
+1. In the Social Feeds source settings, click the **Connect** button and login to Instagram.
+1. Ensure you pick the Facebook Business account associated with the Instagram account you need to access.
+1. Ensure you pick the Facebook Page that has admin access to your Instagram account.
+1. Ensure you pick the Instagram Account to access.
 
 ### Step 5: Select your Instagram Business Account
 1. Select the **Instagram Business Account** that is linked to your Facebook page, to pull content from.
