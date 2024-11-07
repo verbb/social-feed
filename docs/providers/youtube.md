@@ -38,7 +38,7 @@ https://proxy.verbb.io?return=http://my-site.test/social-feeds/auth/callback
 Here, it routes the request through to our Verbb servers, which forwards on the request to the URL in the `return` parameter (which would be your local project).
 
 ## Available Content
-Twitter provides the following types of content as posts.
+YouTube provides the following types of content as posts.
 
 - Channel (Videos from any YouTube channel)
 - User (Videos from any YouTube user)
