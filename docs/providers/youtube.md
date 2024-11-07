@@ -16,7 +16,7 @@ Follow these steps to configure YouTube for Social Feeds.
     1. On the following page, select the **Application Type** as **Web application**.
     1. Provide a suitable **Name** so you can identify it in your Google account. This is not required by {plugin}.
     1. Under the **Authorized JavaScript origins**, click **Add URI** and enter your project's Site URL.
-    1. Under the **Authorized redirect URIs**, click **Add URI** and enter the value from the **Redirect URI** field in Social Login.
+    1. Under the **Authorized redirect URIs**, click **Add URI** and enter the value from the **Redirect URI** field in Social Feeds.
     1. Then click the **Create** button.
 1. Once created, a popup will appear with your OAuth credentials. Copy the **Client ID** and **Client Secret** values and paste into the fields below.
 
