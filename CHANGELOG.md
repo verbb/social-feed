@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.4 - 2025-02-05
+
+### Changed
+- Update Facebook source to use `business_management` scope.
+
 ## 2.0.3 - 2024-09-14
 
 ### Removed
