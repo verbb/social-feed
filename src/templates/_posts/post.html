@@ -37,7 +37,8 @@
 
             {% if icon %}
                 <a class="sfui-provider-icon" href="{{ post.url }}" target="_blank" rel="noreferrer" style="--color: {{ post.providerColor }};">
-                    {{ icon | raw }}
+                    <span>{{ icon | raw }}</span>
+                    <span class="sfui-sr-only">{{ 'View this post on {source}' | t('social-feeds', { source: post.getSourceName() }) }}</span>
                 </a>
             {% endif %}
         </div>

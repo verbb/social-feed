@@ -20,6 +20,18 @@
     margin-right: calc(var(--gutter) * -1);
 }
 
+.sfui-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .sfui-post-col {
     width: calc(100% / var(--columns));
     color: #3A3A3A;
@@ -57,7 +69,7 @@
     }
 
     .sfui-header-date {
-        color: #a0a9b4;
+        color: #62738e;
         margin-left: auto;
     }
 }
