@@ -11,12 +11,18 @@ use verbb\socialfeeds\models\PostMedia;
 
 use Throwable;
 
+use verbb\auth\helpers\Provider as ProviderHelper;
 use verbb\auth\providers\Twitter as TwitterProvider;
 
 class Twitter extends OAuthSource
 {
     // Static Methods
     // =========================================================================
+
+    public static function displayName(): string
+    {
+        return 'X (Twitter)';
+    }
 
     public static function getOAuthProviderClass(): string
     {
@@ -86,6 +92,16 @@ class Twitter extends OAuthSource
             'users.read',
             'offline.access',
         ];
+    }
+
+    public function getPrimaryColor(): ?string
+    {
+        return ProviderHelper::getPrimaryColor('x');
+    }
+
+    public function getIcon(): ?string
+    {
+        return ProviderHelper::getIcon('x');
     }
 
     public function fetchPosts(): ?array
@@ -280,7 +296,7 @@ class Twitter extends OAuthSource
                 $posts[] = new Post([
                     'sourceId' => $this->id,
                     'sourceHandle' => $this->handle,
-                    'sourceType' => self::$providerHandle,
+                    'sourceType' => 'x',
                     'id' => $item['id'] ?? null,
                     'text' => $text,
                     'url' => 'https://twitter.com/' . ($author->username ?? '') . '/status/' . $item['id'],
