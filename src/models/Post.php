@@ -72,6 +72,16 @@ class Post extends Model
         return Template::raw((string)$content);
     }
 
+    public function getSourceName(): ?string
+    {
+        // Allow sources to override content
+        if ($source = $this->getSource()) {
+            return $source::displayName();
+        }
+
+        return null;
+    }
+
     public function hasMedia(): bool
     {
         return $this->images || $this->videos;
@@ -100,7 +110,7 @@ class Post extends Model
             return null;
         }
 
-        $providerName = $this->getSource()::displayName();
+        $providerName = $this?->getSource()::displayName() ?? '';
         $name = $this->author->name ?? null;
 
         $altText = 'Photo from ' . $name . ' on ' . $providerName . ' at ' . $this->dateCreated->format('Y-m-d H:i:s');
